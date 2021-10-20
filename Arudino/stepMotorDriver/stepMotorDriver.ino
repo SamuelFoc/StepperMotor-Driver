@@ -10,6 +10,7 @@ StepMotor* stepMotor = nullptr;
 
 void setup() {
   stepMotor = new ArduinoStepMotor(STEP_PIN);
+  stepMotor->SetTimeBetweenRevolutions(300);
 }
 
 void loop() {
