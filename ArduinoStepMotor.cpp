@@ -15,8 +15,8 @@ void SMD::ArduinoStepMotor::DoOneRevolution()
     for (int i = 0; i < GetStepsPerRevolution(); i++)
     {
         digitalWrite(stepPin, HIGH);
-        delayMicroseconds(300);
+        delayMicroseconds(GetDelayTimeBetweenRevolutions());
         digitalWrite(stepPin, LOW);
-        delayMicroseconds(300);          
+        delayMicroseconds(GetDelayTimeBetweenRevolutions());          
     }
 }
